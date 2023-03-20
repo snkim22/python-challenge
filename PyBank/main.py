@@ -41,6 +41,8 @@ def print_financial_anaylysis():
     max_dec = min(net_changes)
     max_dec_month = months[net_changes.index(max_dec)+1]
 
+    print('Finanical Analysis')
+    print('----------------------------')
     print(f'Total Months: {total_months}')
     print(f'Total: ${total_change}')
     print(f'Average Change: ${ave_change:.2f}')
