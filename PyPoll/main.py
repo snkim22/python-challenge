@@ -1,18 +1,51 @@
-# The total number of votes cast
-# A complete list of candidates who received votes
-# The percentage of votes each candidate won
-# The total number of votes each candidate won
-# The winner of the election based on popular vote.
+import pandas as pd
 
-import os
-import csv
+# define file path and read in the CSV (pd.read_csv stores header row)
 
-# print(os.getcwd())
+data_file = 'Resources/election_data.csv'
+election_df = pd.read_csv(data_file)
 
-file_path = r'C:\Users\SarahKim\UCB\Module_Challenge\python-challenge\python-challenge\PyPoll\Resources\election_data.csv'
+# Since each row is a unique Ballot ID use len to find total number of votes cast
 
-def print_election_results():
-    with open(file_path, newline='') as csvfile:
-        csvreader = csv.reader(csvfile, delimiter=",")
-        next(csvreader)
-        
+total_votes_cast = len(election_df)
+
+print('Election Results')
+print('-------------------------')
+print('Total Votes:'+ str(total_votes_cast))
+print('-------------------------')
+
+# select the 'Candidate' column in the df and use .value_counts to tally each time a unique candidate appears
+# use .sort_index to sort results alphabetically (to match example provided)
+
+candidate_votes = election_df['Candidate'].value_counts().sort_index()
+
+# initially set the variables max_votes as 0 and winner blank
+# use .items to set candidate as keys and votes as values
+
+max_votes = 0
+winner = ''
+
+# loop through to tally votes per candidate and replace max_votes until we find the winner
+for candidate, votes in candidate_votes.items():
+    percent = votes/total_votes_cast *100
+    print(f'{candidate}: {percent:.3f}% ({votes})')
+    if votes > max_votes:
+        max_votes = votes
+        winner = candidate
+
+print('-------------------------')
+print('Winner:' + str(winner))
+print('-------------------------')
+
+output_file = 'Analysis/output.txt'
+with open(output_file, 'w') as f:
+    print('Election Results',file=f)
+    print('-------------------------',file=f)
+    print('Total Votes:'+ str(total_votes_cast),file=f)
+    print('-------------------------',file=f)
+    for candidate, votes in candidate_votes.items():
+        percent = votes/total_votes_cast *100
+        print(f'{candidate}: {percent:.3f}% ({votes})',file=f)
+    print('-------------------------',file=f)
+    print('Winner:'+ str(winner),file=f)
+    print('-------------------------',file=f)
