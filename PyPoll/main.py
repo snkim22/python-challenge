@@ -40,13 +40,13 @@ print('-------------------------')
 # define the path for output file, open, and write in the analysis (use \n to print each output in new line)
 output_file = 'Analysis/output.txt'
 with open(output_file, 'w') as f:
-    print('Election Results\n',file=f)
-    print('-------------------------\n',file=f)
+    print('Election Results',file=f)
+    print('-------------------------',file=f)
     print('Total Votes:'+ str(total_votes_cast),file=f)
-    print('-------------------------\n',file=f)
+    print('-------------------------',file=f)
     for candidate, votes in candidate_votes.items():
         percent = votes/total_votes_cast *100
-        print(f'{candidate}: {percent:.3f}% ({votes})\n',file=f)
-    print('-------------------------\n',file=f)
+        print(f'{candidate}: {percent:.3f}% ({votes})',file=f)
+    print('-------------------------',file=f)
     print('Winner:'+ str(winner),file=f)
-    print('-------------------------\n',file=f)
+    print('-------------------------',file=f)
