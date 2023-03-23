@@ -11,7 +11,7 @@ import csv
 
 # print(os.getcwd())
 
-file_path = r'C:\Users\SarahKim\UCB\Module_Challenge\python-challenge\python-challenge\PyBank\Resources\budget_data.csv'
+file_path = "Resources/budget_data.csv"
 
 def print_financial_anaylysis():
     with open(file_path, newline='') as csvfile:
@@ -49,5 +49,14 @@ def print_financial_anaylysis():
     print(f'Greatest Increase in Profits: {max_inc_month} (${max_inc})')
     print(f'Greatest Decrease in Profits: {max_dec_month} (${max_dec})')
 
+    output_file = "Resources/output.txt"
+    with open(output_file, 'w') as f:
+        print('Finanical Analysis',file=f)
+        print('----------------------------',file=f)
+        print(f'Total Months: {total_months}',file=f)
+        print(f'Total: ${total_change}',file=f)
+        print(f'Average Change: ${ave_change:.2f}',file=f)
+        print(f'Greatest Increase in Profits: {max_inc_month} (${max_inc})',file=f)
+        print(f'Greatest Decrease in Profits: {max_dec_month} (${max_dec})',file=f)
 
 print_financial_anaylysis()
