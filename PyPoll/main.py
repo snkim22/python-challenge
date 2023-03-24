@@ -37,7 +37,7 @@ print('-------------------------')
 print('Winner:' + str(winner))
 print('-------------------------')
 
-# define the path for output file, open, and write in the analysis (use \n to print each output in new line)
+# define the path for output file, open, and write in the analysis
 output_file = 'Analysis/output.txt'
 with open(output_file, 'w') as f:
     print('Election Results',file=f)
@@ -50,3 +50,4 @@ with open(output_file, 'w') as f:
     print('-------------------------',file=f)
     print('Winner:'+ str(winner),file=f)
     print('-------------------------',file=f)
+    
