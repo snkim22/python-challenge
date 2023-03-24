@@ -2,7 +2,7 @@
 
 ## PyBank
 
-![Project Image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fstockanalysis.com%2Fetf%2Fbndd%2F&psig=AOvVaw0lX0i3cn0NEq-dfBzBDT8q&ust=1679703959039000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPjrp_am8_0CFQAAAAAdAAAAABAE)
+![Project Image](revenue-per-lead.png)
 
 #### A python script to analyze the financial records of a company 
 - Step 1: Each row in the data set represents a unique month, the length of the dataset (after the header row) is used to find the total number of months included in the dataset.
@@ -13,7 +13,7 @@
 
 ## PyPoll
 
-![Project Image](https://www.google.com/search?tbs=simg:CAQSgAEafgsQsIynCBpiCmAIAxIo5B7rF_10M5R7dDKUYqgyNG4wYxwOCPfk55jOQKMY0rD2rPb4_1lzeMNhowqbHDeRQxq37ewyG_1aT0tFHYVx1hp_1U6qeBBXDmvQKy0mAaBRfWlHWg35ciquZjxMIAQMCxCOrv4IGgoKCAgBEgRwOCTNDA&sxsrf=APwXEddWQhu6ZoFdxl0sU1jipO7phVbYgA:1679618379926&q=Stock+photography&tbm=isch&sa=X&ved=2ahUKEwiY6ZKHqvP9AhWPFTQIHW-fDo0Qwg56BAgIEAE&biw=1396&bih=684&dpr=1.38#imgrc=awVQoG34tyPgfM)
+![Project Image](Vote_counting.png)
 
 #### A python script to help a small, rural town modernize its vote-counting process
 
